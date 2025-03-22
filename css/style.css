@@ -1,10 +1,10 @@
 /********** Template CSS **********/
 :root {
-    --primary: #f69050;
-    --light: #F0FBFC;
-    --light: #f0e4de;
-    --dark: #181d38;
+    --primary: #007bff; /* A standard blue */
+    --light: #E3F2FD; /* Light blue */
+    --dark: #0D47A1; /* Dark blue */
 }
+
 
 .btn {
     background-color: #fb873f;
