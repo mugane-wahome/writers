@@ -1,8 +1,8 @@
 /********** Template CSS **********/
 :root {
-    --primary: #007bff; /* A standard blue */
+    --primary: #fb873f; /* A standard blue */
     --light: #E3F2FD; /* Light blue */
-    --dark: #0D47A1; /* Dark blue */
+    --dark: hsl(0, 0%, 2%); /* Dark blue */
 }
 
 
@@ -552,7 +552,7 @@
 .footer .footer-menu a {
     margin-right: 15px;
     padding-right: 15px;
-    border-right: 1px solid rgba(255, 255, 255, .1);
+    border-right: 1px solid #fff;
 }
 
 .footer .footer-menu a:last-child {
