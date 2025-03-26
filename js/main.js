@@ -108,6 +108,40 @@
 })(jQuery);
 
 
+let lastScrollY = window.scrollY;
 
+  window.addEventListener("scroll", function () {
+    let whatsappButton = document.getElementById("whatsapp-button");
+    let scrollY = window.scrollY;
 
+    if (Math.abs(scrollY - lastScrollY) > 10) { // Detects scroll movement
+      whatsappButton.style.transform = "rotate(5deg)";
+      setTimeout(() => {
+        whatsappButton.style.transform = "rotate(-5deg)";
+      }, 100);
+      setTimeout(() => {
+        whatsappButton.style.transform = "rotate(0deg)";
+      }, 200);
+    }
+    lastScrollY = scrollY;
+  });
+
+  // Hover Effect
+  document.getElementById("whatsapp-button").addEventListener("mouseenter", function() {
+    this.style.transform = "scale(1.2)";
+    this.style.backgroundColor = "#1ebe57"; // Slightly darker green
+  });
+
+  document.getElementById("whatsapp-button").addEventListener("mouseleave", function() {
+    this.style.transform = "scale(1)";
+    this.style.backgroundColor = "#25D366"; // Original green
+  });
+
+  document.getElementById("buyNowButton").addEventListener("mouseover", function() {
+    this.style.backgroundColor = "#218838"; // Darker green on hover
+});
+
+document.getElementById("buyNowButton").addEventListener("mouseout", function() {
+    this.style.backgroundColor = "#28a745"; // Original green when mouse leaves
+});
 
