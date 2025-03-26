@@ -137,11 +137,11 @@ let lastScrollY = window.scrollY;
     this.style.backgroundColor = "#25D366"; // Original green
   });
 
-  document.getElementById("buyNowButton").addEventListener("mouseover", function() {
-    this.style.backgroundColor = "#218838"; // Darker green on hover
-});
+//   document.getElementById("buyNowButton").addEventListener("mouseover", function() {
+//     this.style.backgroundColor = "#218838"; // Darker green on hover
+// });
 
-document.getElementById("buyNowButton").addEventListener("mouseout", function() {
-    this.style.backgroundColor = "#28a745"; // Original green when mouse leaves
-});
+// document.getElementById("buyNowButton").addEventListener("mouseout", function() {
+//     this.style.backgroundColor = "#28a745"; // Original green when mouse leaves
+// });
 
