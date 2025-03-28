@@ -145,3 +145,34 @@ let lastScrollY = window.scrollY;
 //     this.style.backgroundColor = "#28a745"; // Original green when mouse leaves
 // });
 
+document.addEventListener("DOMContentLoaded", function () {
+    let chatHeader = document.getElementById("chat-header");
+    let chatBody = document.getElementById("chat-body");
+    let chatInput = document.getElementById("chat-input");
+    let chatSend = document.getElementById("chat-send");
+
+    // Toggle chat window
+    chatHeader.addEventListener("click", function () {
+        chatBody.style.display = chatBody.style.display === "none" ? "flex" : "none";
+    });
+
+    // Open WhatsApp with pre-filled message
+    chatSend.addEventListener("click", function () {
+        sendWhatsAppMessage();
+    });
+
+    chatInput.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+            sendWhatsAppMessage();
+        }
+    });
+
+    function sendWhatsAppMessage() {
+        let phoneNumber = "18437038641"; // Replace with your WhatsApp number (e.g., "254712345678" for Kenya)
+        let message = encodeURIComponent(chatInput.value.trim());
+        
+        if (message !== "") {
+            window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
+        }
+    }
+});
